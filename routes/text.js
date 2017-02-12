@@ -3,14 +3,10 @@ var router = express.Router();
 
 var Texter = require('../modules/texter');
 
-/*var position = {
-	x: 20,
-	y: 100
-};
-var canvas = new Canvas(canvasWidth, canvasHeight);
-var ctx = canvas.getContext('2d');*/
+/**
+* url params: msg, color, w, h
+*/
 
-/* GET text page. */
 router.get('/', function(req, res, next) {
 	var queryParams = {
 		text: req.query.msg || 'Add param',
