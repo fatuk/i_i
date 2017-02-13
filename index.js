@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var index = require('./routes/index');
 var text = require('./routes/text');
-var port = process.env['$PORT'];
+var port = process.env.PORT || 8080;
 
 app.use('/', index);
 app.use('/text', text);
