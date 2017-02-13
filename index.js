@@ -2,12 +2,13 @@ var express = require('express');
 var app = express();
 var index = require('./routes/index');
 var text = require('./routes/text');
+var port = process.env['$PORT'];
 
 app.use('/', index);
 app.use('/text', text);
 
-app.listen(8080, function() {
-	console.log('App is listening to 8080 port');
+app.listen(port, function() {
+	console.log('App is listening to ' + port + ' port');
 });
 
 module.exports = app;
