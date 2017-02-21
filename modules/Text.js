@@ -1,11 +1,11 @@
 var Canvas = require('canvas');
 
-var Texter = function (_w, _h) {
+var Text = function (_w, _h) {
 	var texter = {
 		width: _w || 200,
 		height: _h || 200,
 		x: 10,
-		y: 100,
+		y: 10,
 		color: 'green',
 		getImage: getImage,
 		clearCanvas: clearCanvas
@@ -30,4 +30,4 @@ function clearCanvas() {
 	this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 }
 
-module.exports = Texter;
+module.exports = Text;
